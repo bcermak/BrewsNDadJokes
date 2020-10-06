@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+.color1 ul{
+    background-color: blue;
+    margin-right: 20px;
+}
+
+.color2{
+    background-color: blue;
+    
+  
+}
+
+.color3 ul{
+    background-color: green;
+    margin-left: 20px;
+   
+ 
+   
+}
+
+.margin{
+    margin-top: 300px;
+}
+
+.margin1{
+    margin-top: 300px;
+}
+
