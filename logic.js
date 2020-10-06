@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
  
         var API = "f89acb677bf55f31af77b1cbe2b56df8"
@@ -53,3 +54,18 @@ $(document).ready(function(){
 
 
 })
+
+
+  $("#generate").click(generateJoke);
+
+function generateJoke(){
+    $.getJSON(
+        "https://icanhazdadjoke.com/",
+        function(data) {
+          console.log("Cool, here's some joke data: ", data);
+          alert (data.joke);
+        },
+      );
+  
+    };
+
