@@ -20,7 +20,6 @@ $(document).ready(function(){
                     var wind = $("<p>").css("text-align", "center")
                     var uv = $("<p>") .css("text-align", "center")
                     var today = $("<h3>").css("text-align", "center")
-                
                     var tempf = Math.floor((response.main.temp - 273.15) * 1.80 + 32);
                     temp.text(tempf + "\xb0F")
                     humidity.text("Humidity: " + response.main.humidity + "%")
@@ -42,6 +41,8 @@ $(document).ready(function(){
                         $("#weather").append(uv)
                     })
             })
+
+
                
 
         })
@@ -53,7 +54,7 @@ $(document).ready(function(){
 
 
 
-})
+
 
 
   $("#generate").click(generateJoke);
@@ -69,3 +70,4 @@ function generateJoke(){
   
     };
 
+  })
