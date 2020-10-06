@@ -6,6 +6,7 @@ $(document).ready(function(){
         $("#search").on("click",function(event){
             event.preventDefault()
             var zip = $("#textarea1").val()
+           
             
                 var queryUrl3 = "https://api.openbrewerydb.org/breweries?by_postal=" + zip
                 $.ajax({
@@ -17,7 +18,11 @@ $(document).ready(function(){
                     var name = $("<p>")
                     var street = $("<p>")
                     var phone = $("<p>")
-                    var website = $("<a>")
+                    var website = $('<a>',{
+                        text: 'Visit their website!',
+                        href: response2[i].website_url,
+                    }).appendTo("#brew");
+                    $("a").addClass("text")
                     var line = $("<hr>")
                   
                     name.text(response2[i].name)
@@ -29,11 +34,12 @@ $(document).ready(function(){
                     $("#brew").append(phone)
                     $("#brew").append(website)
                     $("#brew").append(line)
-                   
+                    
                     }
                 })
 
-
+                $("#brew").empty()
+                
         })
     
 
