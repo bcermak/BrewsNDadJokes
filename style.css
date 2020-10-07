@@ -12,8 +12,6 @@
    }
  
 
-.margin1{
-
 #generate {
     border-radius: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -61,7 +59,7 @@
     top: 0; 
     bottom: 0; 
     width: 100%; 
-
+}
 .modal-content {
     color:white;
     font-family: 'Crete Round', serif;
