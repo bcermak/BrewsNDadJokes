@@ -1,4 +1,6 @@
+
 $(document).ready(function(){
+
   mapboxgl.accessToken = 'pk.eyJ1Ijoib2JhbGxlbWF0dCIsImEiOiJja2Z6aWtnNmEwZXFrMnVwaTdhbWt1eTBnIn0.W5EjGIiB0XoupWOHNrlowg';
 var map = new mapboxgl.Map({
 container: 'map', // 
@@ -17,6 +19,17 @@ map.addControl(
   );
        var API = "f89acb677bf55f31af77b1cbe2b56df8"
        $('.sidenav').sidenav();
+
+
+  
+    $('.modal').modal();
+  
+    $("#generate").click(generateJoke);
+  
+
+        var API = "f89acb677bf55f31af77b1cbe2b56df8"
+      
+        
         $("#search").on("click",function(event){
             event.preventDefault()
             var zip = $("#textarea1").val()
@@ -56,11 +69,27 @@ map.addControl(
 
                 
         })
-    
-        
-
-
-
-
-
+  
 })
+
+$('#manual-ajax').click(function(event) {
+  event.preventDefault();
+  this.blur(); // Manually remove focus from clicked link.
+  $.get(this.href, function(html) {
+    $(html).appendTo('body').modal();
+  });
+});
+
+
+function generateJoke(){
+    $.getJSON(
+        "https://icanhazdadjoke.com/",
+        function(data) {
+          console.log("Cool, here's some joke data: ", data);
+          var jokeText = JSON.stringify(data.joke)
+          $(".modal-content").html("<h4> Dad Joke: </h4>" + jokeText);
+          
+        },
+      );
+  
+    };

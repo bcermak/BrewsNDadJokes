@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad Jokes and Brews</title>
+
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
@@ -12,17 +13,27 @@
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
- 
-             
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/01a6ceb24f.js" crossorigin="anonymous"></script>         
 </head>
 <body>
     
   <nav>
-    <div class="nav-wrapper indigo darken-4">
-      <a href="#!" class="brand-logo">Bad Jokes and Brews</a>
+    <div class="nav-wrapper blue-grey darken-4">
+      <a href="#!" class="brand-logo"><i class="fas fa-theater-masks"></i> Bad Jokes and Brews <i class="fas fa-beer"></i>
+
+      </a>
       <ul class="right hide-on-med-and-down">
-        <button data-target="modal1" class="btn modal-trigger">Generate Joke</button>
+        <button id = "generate" data-target="modal1" class="btn modal-trigger">Generate Dad Joke</button>
       </ul>
+      
+    </div>
+    <div id="modal1" class="modal blue-grey darken-2">
+      <div class="modal-content">
+      </div>
+      <div class="modal-footer blue-grey darken-4">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Done</a>
+      </div>
     </div>
   </nav>
   <ul id="slide-out" class="sidenav">
@@ -100,6 +111,15 @@
           </span>
         </div>
     </div>
+
+    <footer class="page-footer blue-grey darken-4 margin1">
+        <div class="footer-copyright">
+          <div class="container">
+          © 2014 Copyright Text
+          
+          </div>
+        </div>
+      </footer>
 </div> 
 
 
