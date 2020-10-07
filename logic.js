@@ -1,8 +1,6 @@
 $(document).ready(function(){
- 
-        var API = "f89acb677bf55f31af77b1cbe2b56df8"
-      
-        
+       var API = "f89acb677bf55f31af77b1cbe2b56df8"
+       $('.sidenav').sidenav();
         $("#search").on("click",function(event){
             event.preventDefault()
             var zip = $("#textarea1").val()
@@ -15,7 +13,7 @@ $(document).ready(function(){
                 }).then(function(response2){
                     console.log(response2)
                     for (i = 0; i < response2.length; i++){
-                    var name = $("<p>")
+                    var name = $("<h5>")
                     var street = $("<p>")
                     var phone = $("<p>")
                     var website = $('<a>',{
@@ -34,10 +32,10 @@ $(document).ready(function(){
                     $("#brew").append(phone)
                     $("#brew").append(website)
                     $("#brew").append(line)
-                    
-                    }
+                   
+                  } 
                 })
-
+                
                 $("#brew").empty()
                 
         })
