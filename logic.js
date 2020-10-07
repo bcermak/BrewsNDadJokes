@@ -2,7 +2,7 @@
 $(document).ready(function(){
  
         var API = "f89acb677bf55f31af77b1cbe2b56df8"
-      
+        $('.modal').modal();
         
         $("#search").on("click",function(event){
             event.preventDefault()
@@ -64,7 +64,7 @@ function generateJoke(){
         "https://icanhazdadjoke.com/",
         function(data) {
           console.log("Cool, here's some joke data: ", data);
-          alert (data.joke);
+          $("#joke").text(data.joke);
         },
       );
   
