@@ -2,18 +2,14 @@
     box-sizing: border-box;
 }
 
+.bg{
+    background-color: gray;
+}
 
-
-
-   
-   .text{
+ .text{
        color: white
    }
  
-
-.margin{
-    margin-top: 100px;
-}
 
 .margin1{
     margin-top: 300px;
@@ -32,3 +28,4 @@
 .sidenav{
     background-color: azure;
 }
+
