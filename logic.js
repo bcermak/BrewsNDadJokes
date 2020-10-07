@@ -5,12 +5,15 @@ container: 'map', //
 style: 'mapbox://styles/mapbox/streets-v11',
 center: [-97.733330, 30.266666], 
 zoom: 9 
+
 });
 map.addControl(
   new MapboxGeocoder({
   accessToken: mapboxgl.accessToken,
   mapboxgl: mapboxgl
-  })
+  
+    })
+  
   );
        var API = "f89acb677bf55f31af77b1cbe2b56df8"
        $('.sidenav').sidenav();

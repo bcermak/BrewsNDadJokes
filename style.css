@@ -37,3 +37,11 @@
 .mapboxgl-ctrl-geocoder--icon {
  display: none;
 }
+
+
+#map { 
+    position: relative; 
+    top: 0; 
+    bottom: 0; 
+    width: 100%; 
+}
