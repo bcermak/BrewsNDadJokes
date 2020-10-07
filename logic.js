@@ -4,8 +4,6 @@ $(document).ready(function(){
         $("#search").on("click",function(event){
             event.preventDefault()
             var zip = $("#textarea1").val()
-           
-            
                 var queryUrl3 = "https://api.openbrewerydb.org/breweries?by_postal=" + zip
                 $.ajax({
                     url: queryUrl3,
