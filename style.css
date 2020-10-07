@@ -7,12 +7,12 @@
     background-color: gray;
 }
 
- .text{
+.text{
        color: white
    }
  
 
-.margin1{
+
 
 #generate {
     border-radius: 40px;
@@ -61,6 +61,7 @@
     top: 0; 
     bottom: 0; 
     width: 100%; 
+}
 
 .modal-content {
     color:white;
