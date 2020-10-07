@@ -1,6 +1,12 @@
 
 $(document).ready(function(){
- 
+
+  
+    $('.modal').modal();
+  
+    $("#generate").click(generateJoke);
+  
+
         var API = "f89acb677bf55f31af77b1cbe2b56df8"
       
         
@@ -45,27 +51,27 @@ $(document).ready(function(){
                
 
         })
-    
-
-
-
-
-
-
-
+  
 })
 
+$('#manual-ajax').click(function(event) {
+  event.preventDefault();
+  this.blur(); // Manually remove focus from clicked link.
+  $.get(this.href, function(html) {
+    $(html).appendTo('body').modal();
+  });
+});
 
-  $("#generate").click(generateJoke);
 
 function generateJoke(){
     $.getJSON(
         "https://icanhazdadjoke.com/",
         function(data) {
           console.log("Cool, here's some joke data: ", data);
-          alert (data.joke);
+          var jokeText = JSON.stringify(data.joke)
+          $(".modal-content").html("<h4> Dad Joke: </h4>" + jokeText);
+          
         },
       );
   
     };
-
