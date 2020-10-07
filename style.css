@@ -12,7 +12,7 @@
  
 
 .margin1{
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 .sidenav li {
@@ -29,3 +29,11 @@
     background-color: azure;
 }
 
+#map{
+    height: 400px;
+    width: 800px;
+}
+
+.mapboxgl-ctrl-geocoder--icon {
+ display: none;
+}
