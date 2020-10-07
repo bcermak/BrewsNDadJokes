@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad Jokes and Brews</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     <link rel="stylesheet" href="style.css">
-     <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&family=Permanent+Marker&display=swap" rel="stylesheet">
-     <script src="https://kit.fontawesome.com/01a6ceb24f.js" crossorigin="anonymous"></script>
-             
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/01a6ceb24f.js" crossorigin="anonymous"></script>         
 </head>
 <body>
     
@@ -30,38 +36,82 @@
       </div>
     </div>
   </nav>
-  
-<div class="container">
+  <ul id="slide-out" class="sidenav">
+    <li>78752</li>
+    <p>Black Star Co-op<p>
+    <p>The Brewtorium</p>
+    <hr>
+    <li>78756</li>
+    <p>Draught House Pub and Brewery</p>
+    <p>Pinthouse Pizza North</p>
+    <hr>
+    <li>78758</li>
+    <p>4th Tap Brewing Cooperative</p>
+    <p>Adelbert's Brewery LLC</p>
+    <p>Austin Beerworks</p>
+    <p>Celis Brewery</p>
+    <p>Circle Brewing Company</p>
+    <p>Oskar Blues Brewery</p>
+    <hr>
+    <li>78744</li>
+    <p>Independence Brewing</p>
+    <p>Orf Brewing</p>
+    <hr>
+    <li>78745</li>
+    <p>(512) Brewing Co</p>
+    <p>Skull Mechanix Brewing</p>
+    <p>Thirsty Planet Brewing Co</p>
+    <p>St. Elmo Brewing Company</p>
+    <hr>
+    <li>78704</li>
+    <p>Nomadic Beerworks</p>
+    <p>Pinthouse Pizza South</p>
+    <p>The Austin Beer Garden Brewing Co</p>
+    <p>Uncle Billy's Brewery</p>
+    <hr>
+    <li>78702</li>
+    <p>Hops & Grain Brewing</p>
+    <p>Friends and Allies Brewing Company</p>
+    <p>Lazarus Brewing Company</p>
+    <p>The Brewer's Table</p>
+    <p>Zilker Brewing Co</p>
+    <p>Blue Owl Brewing</p>
+    <hr>
+    <li>78617</li>
+    <p>Live Oak Brewing Co</p>
+    <p>NLand Brewing Company</p>
+  </ul>
+  <a href="#" data-target="slide-out" class=" sidenav-trigger waves-effect waves-light btn"><i class="material-icons">List of Zip Codes!</i></a>
+<div class="container" id="map-container">
   <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
           <textarea id="textarea1" class="materialize-textarea"></textarea>
           <label for="textarea1">Enter 5 digit Zip Code</label>
-          <button class="waves-effect waves-light btn" id="search">button</button>
+          <button class="waves-effect waves-light btn" id="search">Search</button>
         </div>
       </div>
     </form>
   </div>
-    <div class="row">
-        <div class="col s3 card-panel teal">
+    <div class="container">
+    <div class="row" >
+      <div id="map" class="col s6">
+      </div>
+    </div>
+  </div>
+  <hr>
+    <div class="row bg margin1">
+        <div class="col s6 card-panel teal">
             <span class="white-text" id="brew">
             </span>
         </div>
-        <div class="col s6">
-          <div class="card-panel teal">
-            <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-           
-            </span>
-          </div>
-        </div>
-        <div class="col s3 card-panel teal">
+        <div class="col s6 card-panel teal">
           <span class="white-text" id="weather">
-           
           </span>
         </div>
-    
     </div>
+
     <footer class="page-footer blue-grey darken-4 margin1">
         <div class="footer-copyright">
           <div class="container">
@@ -71,6 +121,8 @@
         </div>
       </footer>
 </div> 
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="logic.js"></script>
