@@ -86,7 +86,7 @@ $(document).ready(function(){
                     var website = $('<a>',{
                         text: 'Visit their website!',
                         href: response2[i].website_url,
-                    }).appendTo("#brew");
+                    }).attr("target", "_blank").appendTo("#brew");
                     $("a").addClass("text")
                     var line = $("<hr>")
                   
