@@ -20,18 +20,23 @@ map.addControl(
        var API = "f89acb677bf55f31af77b1cbe2b56df8"
        $('.sidenav').sidenav();
 
-
-  
     $('.modal').modal();
   
     $("#generate").click(generateJoke);
   
+    $("#textarea1").click(emptyLabel);
 
+    function emptyLabel(){
+      $('.label1').html('');
+    }
+    
+    
         var API = "f89acb677bf55f31af77b1cbe2b56df8"
-      
         
         $("#search").on("click",function(event){
             event.preventDefault()
+            
+
             var zip = $("#textarea1").val()
                 var queryUrl3 = "https://api.openbrewerydb.org/breweries?by_postal=" + zip
                 $.ajax({
@@ -65,8 +70,7 @@ map.addControl(
                 })
                 
                 $("#brew").empty()
-               
-
+                     
                 
         })
   
@@ -93,3 +97,6 @@ function generateJoke(){
       );
   
     };
+
+
+
