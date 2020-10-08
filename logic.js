@@ -15,8 +15,10 @@ map.addControl(
   mapboxgl: mapboxgl
   
     })
+    
   
   );
+  
        var API = "f89acb677bf55f31af77b1cbe2b56df8"
        $('.sidenav').sidenav();
 
