@@ -1,26 +1,26 @@
 
 $(document).ready(function(){
+  var value = $("#textarea1").val()
+    mapboxgl.accessToken = 'pk.eyJ1Ijoib2JhbGxlbWF0dCIsImEiOiJja2Z6aWtnNmEwZXFrMnVwaTdhbWt1eTBnIn0.W5EjGIiB0XoupWOHNrlowg';
+  var map = new mapboxgl.Map({
+  container: 'map', // 
+  style: 'mapbox://styles/mapbox/streets-v11',
+  center: [-97.733330, 30.266666], 
+  zoom: 9 
+  });
 
-  mapboxgl.accessToken = 'pk.eyJ1Ijoib2JhbGxlbWF0dCIsImEiOiJja2Z6aWtnNmEwZXFrMnVwaTdhbWt1eTBnIn0.W5EjGIiB0XoupWOHNrlowg';
-var map = new mapboxgl.Map({
-container: 'map', // 
-style: 'mapbox://styles/mapbox/streets-v11',
-center: [-97.733330, 30.266666], 
-zoom: 9 
-
-});
-map.addControl(
-  new MapboxGeocoder({
-  accessToken: mapboxgl.accessToken,
-  mapboxgl: mapboxgl
+  map.addControl(
+    new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
   
     })
     
   
   );
   
-       var API = "f89acb677bf55f31af77b1cbe2b56df8"
-       $('.sidenav').sidenav();
+     var API = "f89acb677bf55f31af77b1cbe2b56df8"
+    $('.sidenav').sidenav();
 
 
   
@@ -34,6 +34,7 @@ map.addControl(
         
         $("#search").on("click",function(event){
             event.preventDefault()
+            $("div").removeClass("hide")
             var zip = $("#textarea1").val()
             var queryUrl = "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + "&appid=" + API
             console.log(zip)
@@ -98,7 +99,7 @@ map.addControl(
                     $("#brew").append(phone)
                     $("#brew").append(website)
                     $("#brew").append(line)
-                   
+                    
                   }
                  
                 })
