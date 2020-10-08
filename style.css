@@ -50,6 +50,7 @@
 
 .sidenav{
     background-color:#263238;
+    position: absolute;
 }
 
 #map{
@@ -96,4 +97,8 @@ font-weight: 600;
 .nav-wrapper {
     padding-left: 20px;
 
+}
+
+.hide{
+    display:none
 }
