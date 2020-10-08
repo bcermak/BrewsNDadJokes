@@ -1,12 +1,11 @@
 
 $(document).ready(function(){
-  var value = $("#textarea1").val()
-    mapboxgl.accessToken = 'pk.eyJ1Ijoib2JhbGxlbWF0dCIsImEiOiJja2Z6aWtnNmEwZXFrMnVwaTdhbWt1eTBnIn0.W5EjGIiB0XoupWOHNrlowg';
+  mapboxgl.accessToken = 'pk.eyJ1Ijoib2JhbGxlbWF0dCIsImEiOiJja2Z6aWtnNmEwZXFrMnVwaTdhbWt1eTBnIn0.W5EjGIiB0XoupWOHNrlowg';
   var map = new mapboxgl.Map({
-  container: 'map', // 
+  container: 'map',
   style: 'mapbox://styles/mapbox/streets-v11',
-  center: [-97.733330, 30.266666], 
-  zoom: 9 
+  center: [-97.733330, 30.266666],
+  zoom: 9
   });
 
   $("#textarea1").click(emptyLabel);
@@ -14,31 +13,30 @@ $(document).ready(function(){
   function emptyLabel(){
     $('.label1').html('');
   }
+  
+  map.addControl(
+  new MapboxGeocoder({
+  accessToken: mapboxgl.accessToken,
+  mapboxgl: mapboxgl
+  })
+  );
 
   map.addControl(
-    new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl
-  
+    new mapboxgl.GeolocateControl({
+    positionOptions: {
+    enableHighAccuracy: true
+    },
+    trackUserLocation: true
     })
-    
-  
-  );
-  
-     var API = "f89acb677bf55f31af77b1cbe2b56df8"
-    $('.sidenav').sidenav();
-
+    );
 
   
-    $('.modal').modal();
   
-    $("#generate").click(generateJoke);
-  
-
-        var API = "f89acb677bf55f31af77b1cbe2b56df8"
-      
-        
-        $("#search").on("click",function(event){
+  var API = "f89acb677bf55f31af77b1cbe2b56df8"
+  $('.sidenav').sidenav();
+  $('.modal').modal();
+  $("#generate").click(generateJoke);
+    $("#search").on("click",function(event){
             event.preventDefault()
             $("div").removeClass("hide")
             var zip = $("#textarea1").val()
@@ -92,7 +90,7 @@ $(document).ready(function(){
                     var website = $('<a>',{
                         text: 'Visit their website!',
                         href: response2[i].website_url,
-                    }).appendTo("#brew");
+                    }).attr("target", "_blank").appendTo("#brew");
                     $("a").addClass("text")
                     var line = $("<hr>")
                   
@@ -112,7 +110,7 @@ $(document).ready(function(){
                 
                 $("#brew").empty()
                
-
+  
                 
         })
   
