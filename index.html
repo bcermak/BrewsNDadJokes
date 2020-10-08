@@ -11,22 +11,20 @@
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"type="text/css"/>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/01a6ceb24f.js" crossorigin="anonymous"></script>         
 </head>
 <body>
-    
   <nav>
     <div class="nav-wrapper blue-grey darken-4">
-      <a href="#!" class="brand-logo"><i class="fas fa-theater-masks"></i> Bad Jokes and Brews <i class="fas fa-beer"></i>
-
+      <a href="#!" class="brand-logo  hide-on-med-and-down"><i class="fas fa-theater-masks"></i> Bad Jokes and Brews <i class="fas fa-beer"></i>
       </a>
-      <ul class="right hide-on-med-and-down">
-        <button id = "generate" data-target="modal1" class="btn modal-trigger">Generate Dad Joke</button>
+      <ul class="right">
+        <button id="generate" data-target="modal1" class="btn modal-trigger blue-grey lighten-4 black-text">Generate Dad Joke</button>
       </ul>
-      
     </div>
     <div id="modal1" class="modal blue-grey darken-2">
       <div class="modal-content">
@@ -81,45 +79,43 @@
     <p>Live Oak Brewing Co</p>
     <p>NLand Brewing Company</p>
   </ul>
-  <a href="#" data-target="slide-out" class=" sidenav-trigger waves-effect waves-light btn"><i class="material-icons">List of Zip Codes!</i></a>
-<div class="container" id="map-container">
+  <a href="#" data-target="slide-out" class=" sidenav-trigger waves-effect waves-light btn blue-grey lighten-4 black-text z-depth-5"><i class="material-icons">List of Zip Codes!</i></a>
+<div class="container">
   <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Enter 5 digit Zip Code</label>
-          <button class="waves-effect waves-light btn" id="search">Search</button>
+          <textarea id="textarea1" class="materialize-textarea "></textarea>
+          <label  for="textarea1">Enter 5 digit Zip Code</label>
+          <button class="waves-effect waves-light btn blue-grey darken-4 z-depth-5" id="search">Search</button>
         </div>
       </div>
     </form>
-  </div>
+</div>
     <div class="container">
-    <div class="row" >
-      <div id="map" class="col s6">
+      <div class="row" >
+        <div id="map" class="col s6">
+        </div>
       </div>
     </div>
-  </div>
-  <hr>
-    <div class="row bg margin1">
-        <div class="col s6 card-panel teal">
-            <span class="white-text" id="brew">
-            </span>
-        </div>
-        <div class="col s6 card-panel teal">
-          <span class="white-text" id="weather">
-          </span>
-        </div>
-    </div>
-
-    <footer class="page-footer blue-grey darken-4 margin1">
-        <div class="footer-copyright">
-          <div class="container">
-          © 2014 Copyright Text
-          
+    <hr>
+      <div class="row hide bg margin1">
+          <div class="col s6 card-panel blue-grey darken-4">
+              <span class="white-text" id="brew">
+              </span>
           </div>
-        </div>
-      </footer>
+          <div class="col s6 card-panel blue-grey darken-4">
+            <span class="white-text" id="weather">
+            </span>
+          </div>
+      </div>
+      <footer class="page-footer blue-grey darken-4 margin1">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            </div>
+          </div>
+        </footer>
 </div> 
 
 

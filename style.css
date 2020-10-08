@@ -4,14 +4,23 @@
 
 
 .bg{
-    background-color: gray;
+    background-color: #cfd8dc;
 }
 
- .text{
+.text{
        color: white
+   }
+
+   body{
+       background-color:#616161;
    }
  
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 381990d89d08885f8f4018fc07e9b3bb5b0e68bc
 #generate {
     border-radius: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -32,16 +41,19 @@
 .sidenav li {
     text-align: center;
     font-weight: bold;
+    color: white
 }
 
 .sidenav p{
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white
 }
 
 
 .sidenav{
-    background-color: azure;
+    background-color:#263238;
+    position: absolute;
 }
 
 #map{
@@ -60,6 +72,10 @@
     bottom: 0; 
     width: 100%; 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 381990d89d08885f8f4018fc07e9b3bb5b0e68bc
 .modal-content {
     color:white;
     font-family: 'Crete Round', serif;
@@ -76,6 +92,7 @@
     border-radius: 30px;
     border: 10px solid rgba(0, 0, 0, 0.3);
     text-align: center;
+    position: absolute;
 }
 
 .modal-footer a{
@@ -86,4 +103,8 @@ font-weight: 600;
 .nav-wrapper {
     padding-left: 20px;
 
+}
+
+.hide{
+    display:none
 }
