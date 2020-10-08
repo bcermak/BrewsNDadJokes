@@ -7,7 +7,13 @@ $(document).ready(function(){
   center: [-97.733330, 30.266666],
   zoom: 9
   });
-   
+
+  $("#textarea1").click(emptyLabel);
+
+  function emptyLabel(){
+    $('.label1').html('');
+  }
+  
   map.addControl(
   new MapboxGeocoder({
   accessToken: mapboxgl.accessToken,
