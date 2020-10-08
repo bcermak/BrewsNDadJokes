@@ -137,3 +137,7 @@ function generateJoke(){
       );
   
     };
+
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
