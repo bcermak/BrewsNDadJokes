@@ -25,7 +25,7 @@ GitHub Pages: https://bcermak.github.io/BrewsNDadJokes/
 
 GitHub Repository: https://github.com/bcermak/BrewsNDadJokes
 
-<img src = "Assets\brews_screenshot.JPG" alt = "Screenshot">
+<a href="https://ibb.co/c3JZc5T"><img src="https://i.ibb.co/7CvZJcy/brews-screenshot.jpg" alt="brews-screenshot" border="0"></a>
 
 
 
