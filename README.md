@@ -11,8 +11,10 @@ The final, and funniest, function of BrewsNDadJokes is the "Generate Joke" butto
 
 ## Technologies Used ##
 - Materialize CDN
+- jsDelivr CDN
+- jQuery CDN
 - icanhazdadjokes API
-- BrweweryDB API
+- Open Brewery DB API
 - MapBox API
 - FontAwesome API
 - Google Fonts API
